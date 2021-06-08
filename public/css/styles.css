@@ -207,6 +207,10 @@ a,a:hover {
   margin-bottom: 0.5cm;
 
 }
+.nut{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
 
     
 .btn-twitter {background-color:#4099FF;color:#fff;}

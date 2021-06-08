@@ -6,12 +6,12 @@
 		<title><%=title%></title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -84,24 +84,24 @@
           
           <div class="row"> 
             <div class="hey">
-            <form onsubmit="return valid()">
+            <form method="POST" action="<%=link%>" enctype="multipart/form-data" onsubmit="return valid()">
               <div class="form-group">
                 <label for="formGroupExampleInput">Name:</label>
-                <input type="text" class="form-control" id="nme" placeholder="">
+                <input type="text" class="form-control" id="nme" placeholder="" name="name" value="<%=author.name%>">
               </div>
               <div class="form-group">
-                <label for="formGroupExampleInput2">Knowns For:</label>
-                <input type="text" class="form-control" id="know" placeholder="">
+                <label for="formGroupExampleInput2">Known as:</label>
+                <input type="text" class="form-control" id="know" placeholder="" name="knownas" value="<%=author.knownas%>">
               </div>
               <div class="form-group">
-                <label for="formGroupExampleInput">Notable Works:</label>
-                <input type="text" class="form-control" id="note" placeholder="">
+                <label for="formGroupExampleInput">Birth Place:</label>
+                <input type="text" class="form-control" id="note" placeholder="" name="birthplace" value="<%=author.birthplace%>">
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Image:</label>
-                <input type="file" class="form-control" id="ima" placeholder="">
+                <input type="file" class="form-control" id="ima" placeholder="" name="image">
               </div>
-              <button type="Submit">"Add"</button>
+              <button class="btn btn-lg btn-primary" type="Submit">Add</button>
             </form>
             </div>
           </div>

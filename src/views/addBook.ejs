@@ -6,12 +6,12 @@
 		<title><%=title%></title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -85,24 +85,24 @@
           
           <div class="row">    
            <div class="eat">
-            <form onsubmit="return valid()">
+            <form method="POST" action="<%=link%>" enctype="multipart/form-data" onsubmit="return valid()">
               <div class="form-group">
                 <label for="formGroupExampleInput">Title:</label>
-                <input type="text" class="form-control" id="nme" placeholder="">
+                <input type="text" class="form-control" id="nme" name="title" placeholder="" value="<%=book.title%>">
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Author:</label>
-                <input type="text" class="form-control" id="know" placeholder="">
+                <input type="text" class="form-control" id="know" name="author" placeholder="" value="<%=book.author%>">
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput">Genre:</label>
-                <input type="text" class="form-control" id="note" placeholder="">
+                <input type="text" class="form-control" id="note" name="genre" placeholder="" value="<%=book.genre%>">
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Image:</label>
-                <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="">
+                <input type="file" class="form-control" id="formGroupExampleInput2" name="image" placeholder="">
               </div>
-              <button type="Submit">"Add"</button>
+              <button class="btn btn-lg btn-primary" type="Submit">Add</button>
             </form>
           </div>
           </div>
